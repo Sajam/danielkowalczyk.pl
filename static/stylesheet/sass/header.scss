@@ -1,0 +1,104 @@
+// main: main.scss
+
+header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 5vh 0 2.5vh 0;
+
+    & > * {
+        margin-right: 1.5vw;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    .picture {
+        img {
+            vertical-align: middle;
+            width: 6.5vw;
+            border-radius: 100%;
+            border: 1px solid #fff;
+            box-shadow: 0px 0px 0px 1px #B6B6B6;
+            transition: 0.2s ease-in-out;
+
+            &:hover {
+                transform: rotate(-5deg);
+                -webkit-filter: brightness(1.1);
+                filter: brightness(1.1);
+            }
+        }
+    }
+
+    .title {
+        flex-grow: 1;
+
+        p {
+            margin: 0;
+            text-transform: uppercase;
+
+            &.name {
+                font-family: 'Slabo 27px', serif;
+                font-size: 2.3em;
+                text-shadow: 1px 1px #fff;
+
+                a {
+                    text-decoration: none;
+                    color: #515151;
+                }
+            }
+
+            &.position {
+                font-weight: 300;
+            }
+        }
+    }
+
+    nav {
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: table;
+
+            li {
+                display: table-cell;
+
+                a {
+                    display: block;
+                    font-weight: 300;
+                    font-size: 1.3em;
+                    text-transform: uppercase;
+                    text-decoration: none;
+                    padding: 0 1vw;
+                    margin-right: 0.5vw;
+                    color: #00B4FF;
+
+                    span {
+                        display: block;
+                        padding: 1.5vh 0;
+                        border-bottom: 1px solid #eee;
+                    }
+                }
+
+                &:hover, &.active {
+                    a {
+                        color: #fff;
+                        background: #00B4FF;
+
+                        span {
+                            border-bottom: none;
+                        }
+                    }
+                }
+
+                &:last-child {
+                    a {
+                        margin-right: 0;
+                    }
+                }
+            }
+        }
+    }
+}

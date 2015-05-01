@@ -1,0 +1,39 @@
+// main: main.scss
+
+footer {
+    margin-left: 8vw;
+    text-align: center;
+    padding: 3vh 0;
+    font-size: 0.9em;
+
+    nav {
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+
+            li {
+                display: inline;
+
+                a {
+                    color: #515151;
+                    font-weight: 300;
+                    text-decoration: none;
+
+                    &:hover {
+                        color: #00B4FF;
+                    }
+                }
+            }
+
+            li + li {
+                &:before {
+                    content: '\25A0';
+                    font-size: 0.6em;
+                    vertical-align: 0.3em;
+                    margin: 0 1.1em 0 0.7em;
+                }
+            }
+        }
+    }
+}
