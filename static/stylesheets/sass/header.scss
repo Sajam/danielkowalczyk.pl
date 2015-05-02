@@ -4,14 +4,10 @@ header {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    padding: 5vh 0 2.5vh 0;
+    padding: 3vh 0 2.5vh 0;
 
-    & > * {
-        margin-right: 1.5vw;
-
-        &:last-child {
-            margin-right: 0;
-        }
+    & > *:nth-child(n+2) {
+        margin-left: 1.5vw;
     }
 
     .picture {
@@ -56,6 +52,8 @@ header {
     }
 
     nav {
+        margin-top: 2vh;
+
         ul {
             list-style-type: none;
             margin: 0;
@@ -72,21 +70,16 @@ header {
                     text-transform: uppercase;
                     text-decoration: none;
                     padding: 1.5vh 1vw;
-                    margin-right: 0.5vw;
                     color: #00B4FF;
                 }
 
-                &.active {
-                    a {
-                        color: #fff;
-                        background: #00B4FF;
-                    }
+                & + li a {
+                    margin-left: 0.5vw;
                 }
 
-                &:last-child {
-                    a {
-                        margin-right: 0;
-                    }
+                &.active a {
+                    color: #fff;
+                    background: #00B4FF;
                 }
             }
         }
