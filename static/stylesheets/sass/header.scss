@@ -66,30 +66,20 @@ header {
                 display: table-cell;
 
                 a {
-                    display: block;
+                    display: inline-block;
                     font-weight: 300;
                     font-size: 1.3em;
                     text-transform: uppercase;
                     text-decoration: none;
-                    padding: 0 1vw;
+                    padding: 1.5vh 1vw;
                     margin-right: 0.5vw;
                     color: #00B4FF;
-
-                    span {
-                        display: block;
-                        padding: 1.5vh 0;
-                        border-bottom: 1px solid #eee;
-                    }
                 }
 
-                &:hover, &.active {
+                &.active {
                     a {
                         color: #fff;
                         background: #00B4FF;
-
-                        span {
-                            border-bottom: none;
-                        }
                     }
                 }
 
