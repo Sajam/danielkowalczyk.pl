@@ -1,0 +1,12 @@
+$blue: #00B4FF;
+$gray: #515151;
+
+@mixin standardBoxShadow {
+  -webkit-box-shadow: 0px 0px 4px -1px rgba(0, 0, 0, 0.42);
+  -moz-box-shadow: 0px 0px 4px -1px rgba(0, 0, 0, 0.42);
+  box-shadow: 0px 0px 4px -1px rgba(0, 0, 0, 0.42);
+}
+
+@mixin button {
+  padding: 0.5vh 0.8vw;
+}

@@ -1,9 +1,8 @@
-// out: ../compiled/main.css, compress: true
-
 @import '../vendor/normalize.css';
 @import '../vendor/ionicons.css';
 @import '../vendor/hover.css';
 @import '../vendor/flag-icon.css';
+@import 'definitions.scss';
 @import 'basic.scss';
 @import 'language-switcher.scss';
 @import 'header.scss';

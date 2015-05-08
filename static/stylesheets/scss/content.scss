@@ -1,0 +1,178 @@
+.wrapper > .content {
+  flex-grow: 1;
+  margin-left: 8vw;
+  padding: 3vh 1.5vw;
+  background: #fff;
+  @include standardBoxShadow;
+
+  .placeholder {
+    text-align: center;
+    padding: 5vh 0;
+    opacity: 0.5;
+  }
+
+  article {
+    header {
+      .date, h1 {
+        display: inline;
+        vertical-align: middle;
+        margin: 0;
+        line-height: 1.3;
+      }
+
+      .date {
+        background: #eee;
+        padding: 0.3em 0.7vw;
+        margin: 0 0.5vw 0 0;
+      }
+
+      a.title {
+        padding-bottom: 4px;
+
+        h1 {
+          font-size: 1.65em;
+          font-weight: 400;
+        }
+      }
+    }
+
+    a:hover {
+      border-bottom: 1px dotted $blue;
+    }
+
+    p {
+      text-align: justify;
+      line-height: 1.4;
+      padding: 0 0.5vw;
+    }
+
+    table {
+      margin: 1.1em auto 1.4em auto;
+      border-bottom: 1px solid #ddd;
+
+      th {
+        background-color: $blue;
+        color: #fff;
+        font-weight: 400;
+        padding: 5px 10px;
+      }
+
+      td {
+        padding: 4px 6px;
+        font-size: 0.9em;
+      }
+
+      tr:nth-child(even) td {
+        background-color: #eee;
+      }
+    }
+
+    blockquote {
+      margin-left: 15px;
+      border-left: 10px solid #eee;
+      padding: 5px 0 5px 20px;
+    }
+
+    sup {
+      top: -0.3em;
+    }
+
+    footer {
+      text-align: right;
+
+      ul.tags {
+        display: inline;
+        margin: 0;
+        padding: 0;
+        vertical-align: middle;
+        list-style-type: none;
+        opacity: 0.5;
+
+        li {
+          display: inline;
+
+          &:before {
+            content: '#';
+          }
+
+          & + li {
+            margin-left: 3px;
+          }
+        }
+
+        &:hover {
+          opacity: 1;
+        }
+      }
+
+      a.continue-reading {
+        @include button;
+        display: inline;
+        vertical-align: middle;
+
+        span {
+          margin-left: 0.2vw;
+        }
+
+        &:hover {
+          border: none;
+        }
+      }
+
+      ul.tags + a.continue-reading {
+        margin-left: 0.7vw;
+      }
+    }
+
+    & + article {
+      margin-top: 5vh;
+    }
+
+    &:hover {
+      header > .date {
+        color: #fff;
+        background: $gray;
+      }
+    }
+  }
+
+  ul.pagination {
+    display: table;
+    margin: 0 auto;
+    padding: 0;
+    width: 100%;
+    list-style-type: none;
+
+    // Assuming there are only 2 items.
+    li {
+      display: table-cell;
+      width: 50%;
+
+      a {
+        @include button;
+      }
+
+      &.older {
+        a > span {
+          margin-right: 0.2vw;
+        }
+      }
+
+      &.newer {
+        text-align: right;
+
+        a > span {
+          margin-left: 0.2vw;
+        }
+      }
+    }
+  }
+
+  * + ul.pagination {
+    margin-top: 3vh;
+  }
+
+  ul.pagination + * {
+    margin-top: 3vh;
+  }
+}

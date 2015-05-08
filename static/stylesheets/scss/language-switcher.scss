@@ -1,0 +1,55 @@
+ul.language-switcher {
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 1vh 0;
+  list-style-type: none;
+
+  li {
+    display: none;
+
+    a {
+      display: block;
+      padding: 0.7vh 1vw;
+      font-size: 0.85em;
+      text-transform: uppercase;
+      color: $blue;
+      text-decoration: none;
+      opacity: 0.4;
+
+      span {
+        margin-right: 0.35vw;
+      }
+    }
+
+    &:hover, &.active {
+      display: block;
+
+      a {
+        opacity: 1;
+      }
+    }
+
+    &.active a:after {
+      margin-left: 0.4vw;
+      font-family: 'Ionicons';
+      font-size: 0.7em;
+      content: '\f123';
+      color: $gray;
+    }
+  }
+
+  &:hover {
+    background: #fff;
+    @include standardBoxShadow;
+
+    li {
+      display: block;
+    }
+  }
+}
