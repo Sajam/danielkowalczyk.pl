@@ -14,12 +14,14 @@
             <ul class="language-switcher">
                 <li class="active">
                     <a href="#" title="Switch to English language">
-                        <span class="flag-icon flag-icon-gb"></span> English
+                        <span class="flag-icon flag-icon-gb"></span>
+                        English
                     </a>
                 </li>
                 <li>
                     <a href="#" title="Zmień na język polski">
-                        <span class="flag-icon flag-icon-pl"></span> Polski
+                        <span class="flag-icon flag-icon-pl"></span>
+                        Polski
                     </a>
                 </li>
             </ul>
@@ -31,65 +33,141 @@
 
                 <div class="title">
                     <p class="name">
-                        <a href="index.html" title="Home page">Daniel Kowalczyk</a>
+                        <a href="index.html" title="Home page">
+                            Daniel Kowalczyk
+                        </a>
                     </p>
-                    <p class="position">Software Engineer, full-stack web developer</p>
+                    <p class="position">
+                        Software Engineer, full-stack web developer
+                    </p>
                 </div>
 
                 <nav>
                     <ul>
                         <li class="active">
-                            <a class="hvr-bounce-to-top" href="index.html" title="Read my blog">Blog</a>
+                            <a class="hvr-bounce-to-top" href="index.html" title="Read my blog">
+                                Blog
+                            </a>
                         </li>
                         <li>
-                            <a class="hvr-bounce-to-top" href="projects.html" title="See me projects">Projects</a>
+                            <a class="hvr-bounce-to-top" href="projects.html" title="See me projects">
+                                Projects
+                            </a>
                         </li>
                         <li>
-                            <a class="hvr-bounce-to-top" href="cv.html" title="Curriculum Vitae">CV</a>
+                            <a class="hvr-bounce-to-top" href="cv.html" title="Curriculum Vitae">
+                                CV
+                            </a>
                         </li>
                         <li>
-                            <a class="hvr-bounce-to-top" href="contact.html" title="Get in touch!">Contact</a>
+                            <a class="hvr-bounce-to-top" href="contact.html" title="Get in touch!">
+                                Contact
+                            </a>
                         </li>
                     </ul>
                 </nav>
             </header>
 
             <div class="content">
-                <ul class="pagination">
-                    <li class="older">
-                        <a class="hvr-bounce-to-left" href="#">
-                            <span class="ion-arrow-left-c"></span>
-                            Older entries
-                        </a>
-                    </li>
+                <!--
+                    In case if there are no items you can use following markup:
 
-                    <li class="newer">
-                        <a class="disabled hvr-bounce-to-right" href="#">
-                            Newer entries
-                            <span class="ion-arrow-right-c"></span>
-                        </a>
-                    </li>
-                </ul>
+                    <div class="placeholder">
+                        No items.
+                    </div>
+                -->
+
+                <nav class="older-newer-pagination only-navigation">
+                    <a class="hvr-bounce-to-left" href="#">
+                        <span class="ion-arrow-left-c"></span>
+                        Older posts
+                    </a>
+
+                    <div class="page-numbering">
+                        <span>
+                            Page
+                        </span>
+
+                        <strong title="Current page">
+                            24
+                        </strong>
+
+                        <span>
+                            of
+                        </span>
+
+                        24
+                    </div>
+
+                    <a class="disabled hvr-bounce-to-right" href="#">
+                        Newer posts
+                        <span class="ion-arrow-right-c"></span>
+                    </a>
+                </nav>
+
+                <!-- Begin posts list -->
 
                 <article>
                     <header>
-                        <div class="date">May 2<sup>nd</sup>, 2015</div>
-                        <a class="title" href="#">
-                            <h1>Example entry with short intro, tags and read more button</h1>
+                        <time datetime="2015-05-02 19:11">
+                            May 2<sup>nd</sup>, 2015
+                        </time>
+
+                        <a class="title" href="post.html">
+                            <h1>
+                                Example entry with code in intro, tags and read more button
+                            </h1>
                         </a>
                     </header>
 
-                    <p>The bedding was hardly able to cover <strong>strong</strong> it and seemed ready to slide off any moment. His many legs, pitifully thin compared with the size of the rest of him, <a href="#">link</a> waved about helplessly as he looked. "What's happened to me? " he thought. It wasn't a dream. His room, a proper human room although a little too small, lay peacefully between its four familiar walls.</p>
+                    <p>
+                        The bedding was hardly able to cover <strong>strong</strong> it and seemed ready to slide off any moment.
+                        His many legs, <code>variableName</code> thin compared with the size of the rest of him,
+                        <a href="#">link</a> waved about helplessly as he looked. "What's happened to me?" he thought.
+                        It wasn't a dream. His room, a proper human room although a little too small,
+                        lay peacefully between its four familiar walls.
+                    </p>
+
+                    <pre>var MyObject = function () {
+    return this.init();
+}
+
+MyObject.prototype.init = function () {
+    return this;
+};
+
+MyObject.prototype.doSomethingMethod = function () {
+    this.doSomething() && this.toIllustrate() && this.howLongLines() && this.behaves() && this.whenObviously() && this.lineIs() && this.veryLong();
+    this.nowFinished();
+
+    return this;
+};</pre>
 
                     <footer>
                         <ul class="tags">
-                            <li><a href="#">example</a></li>
-                            <li><a href="#">general</a></li>
-                            <li><a href="#">python</a></li>
-                            <li><a href="#">coding-style</a></li>
+                            <li>
+                                <a href="#">
+                                    example
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    general
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    python
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    coding-style
+                                </a>
+                            </li>
                         </ul>
 
-                        <a class="continue-reading hvr-bounce-to-right" href="#">
+                        <a class="continue-reading hvr-bounce-to-right" href="post.html">
                             Continue reading
                             <span class="ion-arrow-right-c"></span>
                         </a>
@@ -98,9 +176,14 @@
 
                 <article>
                     <header>
-                        <div class="date">September 15<sup>th</sup>, 2015</div>
-                        <a class="title" href="#">
-                            <h1>Example entry with long title, no tags. Also no read more button because all content is already displayed, we don't want to lie.</h1>
+                        <time datetime="2015-09-15 14:33">
+                            September 15<sup>th</sup>, 2015
+                        </time>
+
+                        <a class="title" href="post.html">
+                            <h1>
+                                Example entry with long title, no tags. Also no read more button because all content is already displayed, we don't want to lie.
+                            </h1>
                         </a>
                     </header>
 
@@ -109,29 +192,59 @@
 
                 <article>
                     <header>
-                        <div class="date">November 1<sup>st</sup>, 2015</div>
-                        <a class="title" href="#">
-                            <h1>Only tags, no read more button</h1>
+                        <time datetime="2015-11-01 11:45">
+                            November 1<sup>st</sup>, 2015
+                        </time>
+
+                        <a class="title" href="post.html">
+                            <h1>
+                                Only tags, no read more button
+                            </h1>
                         </a>
                     </header>
 
+                    <pre class="short">// Example code listing
+for (i = 0, length = array.length; i &lt; length; i += 1) {
+    printf('%d\n', i);
+}</pre>
                     <p>The bedding was hardly able to cover <strong>strong</strong> it and seemed ready to slide off any moment. His many legs, pitifully thin compared with the size of the rest of him, <a href="#">link</a> waved about helplessly as he looked. "What's happened to me? " he thought. It wasn't a dream. His room, a proper human room although a little too small, lay peacefully between its four familiar walls.</p>
 
                     <footer>
                         <ul class="tags">
-                            <li><a href="#">example</a></li>
-                            <li><a href="#">general</a></li>
-                            <li><a href="#">python</a></li>
-                            <li><a href="#">coding-style</a></li>
+                            <li>
+                                <a href="#">
+                                    example
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    general
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    python
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    coding-style
+                                </a>
+                            </li>
                         </ul>
                     </footer>
                 </article>
 
                 <article>
                     <header>
-                        <div class="date">October 16<sup>th</sup>, 2015</div>
-                        <a class="title" href="#">
-                            <h1>Full-featured example that using many various elements</h1>
+                        <time datetime="2015-10-16 08:17">
+                            October 16<sup>th</sup>, 2015
+                        </time>
+
+                        <a class="title" href="post.html">
+                            <h1>
+                                Full-featured example that using many various elements
+                            </h1>
                         </a>
                     </header>
 
@@ -147,82 +260,132 @@
 
                     <table>
                         <thead>
-                        <tr>
-                            <th>Entry Header 1</th>
-                            <th>Entry Header 2</th>
-                            <th>Entry Header 3</th>
-                            <th>Entry Header 4</th>
-                        </tr>
+                            <tr>
+                                <th>Entry Header 1</th>
+                                <th>Entry Header 2</th>
+                                <th>Entry Header 3</th>
+                                <th>Entry Header 4</th>
+                            </tr>
                         </thead>
-                        <tbody
-                        <tr>
-                            <td>Entry First Line 1</td>
-                            <td>Entry First Line 2</td>
-                            <td>Entry First Line 3</td>
-                            <td>Entry First Line 4</td>
-                        </tr>
-                        <tr>
-                            <td>Entry Line 1</td>
-                            <td>Entry Line 2</td>
-                            <td>Entry Line 3</td>
-                            <td>Entry Line 4</td>
-                        </tr>
-                        <tr>
-                            <td>Entry Last Line 1</td>
-                            <td>Entry Last Line 2</td>
-                            <td>Entry Last Line 3</td>
-                            <td>Entry Last Line 4</td>
-                        </tr>
+                        <tbody>
+                            <tr>
+                                <td>Entry First Line 1</td>
+                                <td>Entry First Line 2</td>
+                                <td>Entry First Line 3</td>
+                                <td>Entry First Line 4</td>
+                            </tr>
+                            <tr>
+                                <td>Entry Line 1</td>
+                                <td>Entry Line 2</td>
+                                <td>Entry Line 3</td>
+                                <td>Entry Line 4</td>
+                            </tr>
+                            <tr>
+                                <td>Entry Last Line 1</td>
+                                <td>Entry Last Line 2</td>
+                                <td>Entry Last Line 3</td>
+                                <td>Entry Last Line 4</td>
+                            </tr>
                         </tbody>
                     </table>
 
                     <p>"What's happened to me? " he thought. It wasn't a dream. His room, a proper human room although a little too small, lay peacefully between its four familiar walls. It showed a lady fitted out with a fur hat and fur boa who sat upright, raising a heavy fur muff that covered the whole of her lower arm towards the viewer.</p>
-                    <blockquote>Gregor then turned to look out the window at the dull weather. Drops of rain could be heard hitting the pane, which made him feel quite sad. "How about if I sleep a little bit longer and forget all this nonsense", he thought, but that was something he was unable to do because he was used to sleeping on his right, and in his present state couldn't get into that position. However hard he threw himself onto his right, he always rolled back to where he was.</blockquote>
+
+                    <blockquote>
+                        Gregor then turned to look out the window at the dull weather. Drops of rain could be heard hitting the pane, which made him feel quite sad. "How about if I sleep a little bit longer and forget all this nonsense", he thought, but that was something he was unable to do because he was used to sleeping on his right, and in his present state couldn't get into that position. However hard he threw himself onto his right, he always rolled back to where he was.
+
+                        <p class="author">
+                            — Gall Anonim
+                        </p>
+                    </blockquote>
+
                     <p>It showed a lady fitted out with a fur hat and fur boa who sat upright, raising a heavy fur muff that covered the whole of her lower arm towards the viewer. "What's happened to me? " he thought. It wasn't a dream. His room, a proper human room although a little too small, lay peacefully between its four familiar walls.</p>
 
                     <footer>
                         <ul class="tags">
-                            <li><a href="#">example</a></li>
-                            <li><a href="#">general</a></li>
-                            <li><a href="#">python</a></li>
-                            <li><a href="#">coding-style</a></li>
+                            <li>
+                                <a href="#">
+                                    example
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    general
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    python
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    coding-style
+                                </a>
+                            </li>
                         </ul>
 
-                        <a class="continue-reading hvr-bounce-to-right" href="#">
+                        <a class="continue-reading hvr-bounce-to-right" href="post.html">
                             Continue reading
                             <span class="ion-arrow-right-c"></span>
                         </a>
                     </footer>
                 </article>
 
-                <ul class="pagination">
-                    <li class="older">
-                        <a class="hvr-bounce-to-left" href="#">
-                            <span class="ion-arrow-left-c"></span>
-                            Older entries
-                        </a>
-                    </li>
+                <!-- End posts list -->
 
-                    <li class="newer">
-                        <a class="disabled hvr-bounce-to-right" href="#">
-                            Newer entries
-                            <span class="ion-arrow-right-c"></span>
-                        </a>
-                    </li>
-                </ul>
+                <nav class="older-newer-pagination">
+                    <a class="hvr-bounce-to-left" href="#">
+                        <span class="ion-arrow-left-c"></span>
+                        Older posts
+                    </a>
 
-                <div class="placeholder">
-                    No items.
-                </div>
+                    <div class="page-numbering">
+                        <span>
+                            Page
+                        </span>
+
+                        <strong title="Current page">
+                            24
+                        </strong>
+
+                        <span>
+                            of
+                        </span>
+
+                        24
+                    </div>
+
+                    <a class="disabled hvr-bounce-to-right" href="#">
+                        Newer posts
+                        <span class="ion-arrow-right-c"></span>
+                    </a>
+                </nav>
             </div><!-- .content -->
 
             <footer>
                 <nav>
                     <ul>
-                        <li class="active"><a href="index.html"><span>Blog</span></a></li>
-                        <li><a href="projects.html"><span>Projects</span></a></li>
-                        <li><a href="cv.html"><span>CV</span></a></li>
-                        <li><a href="contact.html"><span>Contact</span></a></li>
+                        <li class="active">
+                            <a href="index.html">
+                                Blog
+                            </a>
+                        </li>
+                        <li>
+                            <a href="projects.html">
+                                Projects
+                            </a>
+                        </li>
+                        <li>
+                            <a href="cv.html">
+                                CV
+                            </a>
+                        </li>
+                        <li>
+                            <a href="contact.html">
+                                Contact
+                            </a>
+                        </li>
                     </ul>
                 </nav>
             </footer>
@@ -230,6 +393,7 @@
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="static/javascript/vendor/jquery-2.1.4.min.js"><\/script>')</script>
+        <script src="static/javascript/code-listing.js"></script>
         <script src="static/javascript/main.js"></script>
         <script>
             (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

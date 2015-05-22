@@ -1,0 +1,25 @@
+ul.tags {
+  display: inline;
+  margin: 0;
+  padding: 0;
+  vertical-align: middle;
+  list-style-type: none;
+  opacity: 0.5;
+
+  li {
+    display: inline;
+
+    &:before {
+      content: '#';
+      margin-right: -0.2em;
+    }
+
+    & + li {
+      margin-left: 3px;
+    }
+  }
+
+  &:hover {
+    opacity: 1;
+  }
+}

@@ -1,0 +1,61 @@
+$icon-spacing: 0.2vw;
+
+
+.older-newer-pagination {
+  position: relative;
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 3vh;
+
+  & > :first-child {
+    float: left;
+    @include button;
+
+    span {
+      margin-right: $icon-spacing;
+    }
+  }
+
+  & > :not(:first-child):not(:last-child) {
+    @include centered;
+
+    &.page-numbering {
+      display: table;
+      font-size: 0.9em;
+      letter-spacing: 0.07em;
+      opacity: 0.7;
+
+      span {
+        padding: 0 0.5vw;
+        font-size: 0.8em;
+        text-transform: uppercase;
+      }
+
+      & > * {
+        display: table-cell;
+        vertical-align: middle;
+      }
+    }
+  }
+
+  & > :last-child {
+    float: right;
+    @include button;
+
+    span {
+      margin-left: $icon-spacing;
+    }
+  }
+
+  &.only-navigation {
+    & > :not(:first-child):not(:last-child) {
+      display: none;
+    }
+  }
+}
+
+* + .older-newer-pagination {
+  margin-top: 6vh;
+  margin-bottom: 1vh;
+}

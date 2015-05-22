@@ -1,0 +1,94 @@
+$code-listing-line-height: 1.3em;
+$code-listing-vertical-padding: 5px;
+$code-listing-horizontal-padding: 10px;
+
+
+.code-listing-default {
+  overflow: visible;
+  overflow-y: auto;
+  margin: 1.5em 0 1em 0;
+  font-size: 0.75em;
+
+  &.short {
+    overflow-y: hidden;
+
+    .listing {
+      bottom: - $code-listing-line-height;
+      margin-top: - $code-listing-line-height;
+    }
+  }
+
+  .listing {
+    position: relative;
+
+    .buttons {
+      display: none;
+      position: absolute;
+      top: 10px;
+      right: 7px;
+
+      a {
+        opacity: 0.5;
+        padding: 3px 5px;
+        border: 1px solid #D8D8D8;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        font-size: 0.9em;
+        color: #000;
+        background-color: #EAEAEA;
+        cursor: pointer;
+
+        & + a {
+          margin-left: 5px;
+        }
+
+        &:hover {
+          opacity: 1;
+          border: none;
+          background-color: $blue;
+          color: #fff;
+        }
+      }
+    }
+
+    .numbering {
+      position: absolute;
+      top: 0;
+      left: 0;
+      padding: $code-listing-vertical-padding 0;
+      text-align: right;
+      color: rgb(161, 161, 161);
+
+      .active:before {
+        position: absolute;
+        left: 0;
+        margin-top: -5px;
+        font-size: 1.5em;
+        content: '\2192'; // RIGHTWARDS ARROW: →
+      }
+    }
+
+    .code {
+      overflow-x: scroll;
+      padding: $code-listing-vertical-padding 0;
+      background: #F5F5F5;
+    }
+  }
+
+  span {
+    display: block;
+    height: $code-listing-line-height;
+    min-width: 1px;
+    padding: 0 $code-listing-horizontal-padding;
+
+    &.active {
+      font-weight: bold;
+    }
+  }
+
+  &:hover {
+    .buttons {
+      display: block;
+    }
+  }
+}

@@ -37,7 +37,7 @@ ul.language-switcher {
 
     &.active a:after {
       margin-left: 0.4vw;
-      font-family: 'Ionicons';
+      font-family: 'Ionicons', sans-serif;
       font-size: 0.7em;
       content: '\f123';
       color: $gray;
@@ -46,7 +46,7 @@ ul.language-switcher {
 
   &:hover {
     background: #fff;
-    @include standardBoxShadow;
+    @include standardShadow;
 
     li {
       display: block;
